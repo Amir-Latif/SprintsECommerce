@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>admin</h1>
+    <button id="assignRole">assignRole</button>
+    <button id="getCustomerActivities">getCustomerActivities</button>
+    <button id="manageCustomer">manageCustomer</button>
+    <button id="getProducts">getProducts</button>
+    <button id="getOrders">getOrders</button>
+    <button id="manageOrderStatus">manageOrderStatus</button>
+    <button id="getStats">getStats</button>
+
+    <form id="manageVoucher">
+      <input type="text" name="voucher" placeholder="voucher" />
+      <select name="action">
+        <option value="Add">Add</option>
+        <option value="Remove">Remove</option>
+        <option value="Update">Update</option>
+      </select>
+      <input type="date" placeholder="expiry" name="expiry" />
+      <input type="number" placeholder="discount" name="discount" min="1" max="100" />
+      <button type="submit">manageVoucher</button>
+    </form>
+
+    <form id="manageBrandForm">
+      <input name="name" type="text" required />
+      <input type="color" name="color" id="" />
+      <select name="action" id="" required>
+        <option value="Add">Add</option>
+        <option value="Remove">Remove</option>
+        <option value="Update">Update</option>
+      </select>
+      <input type="file" name="images" multiple id="" />
+      <button type="submit">manageBrand</button>
+    </form>
+    <form id="manageCategoryForm">
+      <input name="name" type="text" required />
+      <input type="color" name="color" id="" />
+      <select name="action" id="" required>
+        <option value="Add">Add</option>
+        <option value="Remove">Remove</option>
+        <option value="Update">Update</option>
+      </select>
+      <input type="file" name="images" multiple id="" />
+      <button type="submit">manageCategory</button>
+    </form>
+
+    <form id="manageProductForm">
+      <input type="text" name="productId" placeholder="productId" />
+      <input type="text" name="name" id="" required placeholder="productName" />
+      <input
+        type="text"
+        name="category"
+        id=""
+        required
+        placeholder="category"
+      />
+      <input type="text" name="brand" id="" required placeholder="brand" />
+      <input
+        type="description"
+        name="description"
+        id=""
+        placeholder="description"
+      />
+      <input type="color" name="color" id="" placeholder="color" />
+      <input
+        type="number"
+        name="price"
+        id=""
+        min="0"
+        required
+        placeholder="price"
+      />
+      <input
+        type="checkbox"
+        name="stockAvailability"
+        id=""
+        placeholder="stockAvailability"
+      />
+      <input
+        type="number"
+        name="deliveryNotice"
+        id=""
+        min="1"
+        required
+        placeholder="deliveryNotice"
+      />
+      <select name="action" id="" required>
+        <option value="Add">Add</option>
+        <option value="Remove">Remove</option>
+        <option value="Update">Update</option>
+      </select>
+      <input type="file" name="images" multiple id="" />
+      <button type="submit">manageProduct</button>
+    </form>
+
+    <h1>login</h1>
+    <button id="register">register</button>
+    <button id="login">login</button>
+    <button id="logout">logout</button>
+    <button id="changePassword">changePassword</button>
+
+    <h1>Customer</h1>
+    <button id="getCategoryProducts">getCategoryProducts</button>
+    <button id="searchProduct">searchProduct</button>
+    <button id="addToCart">AddToCart</button>
+    <button id="removeFromCart">RemoveFromCart</button>
+    <button id="manageOrder">manageOrder</button>
+    <button id="manageReview">manageReview</button>
+
+    <script src="js/adminAPIs.js"></script>
+    <script src="js/CustomerAPIs.js"></script>
+  </body>
+</html>

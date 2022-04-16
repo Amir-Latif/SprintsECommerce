@@ -1,0 +1,9 @@
+﻿.vs
+bin
+obj
+Todo.md
+ToCommit.md
+build
+node-modules
+*jpg
+*jpeg
