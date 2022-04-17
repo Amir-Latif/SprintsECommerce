@@ -24,7 +24,13 @@
         <option value="Update">Update</option>
       </select>
       <input type="date" placeholder="expiry" name="expiry" />
-      <input type="number" placeholder="discount" name="discount" min="1" max="100" />
+      <input
+        type="number"
+        placeholder="discount"
+        name="discount"
+        min="1"
+        max="100"
+      />
       <button type="submit">manageVoucher</button>
     </form>
 
@@ -101,7 +107,15 @@
     </form>
 
     <h1>login</h1>
-    <button id="register">register</button>
+
+    <form id="register">
+      <input type="text" name="userName" placeholder="userName" />
+      <input type="email" name="email" placeholder="email" />
+      <input type="password" name="passWord" placeholder="password" />
+      <button type="submit">Register</button>
+    </form>
+    <div id="registerMessage"></div>
+
     <button id="login">login</button>
     <button id="logout">logout</button>
     <button id="changePassword">changePassword</button>
