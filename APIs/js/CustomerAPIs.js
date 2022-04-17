@@ -1,17 +1,12 @@
-﻿document.getElementById("register").addEventListener("click", function () {
+document.getElementById("register").addEventListener("click", function (e) {
+  e.preventDefault();
   fetch("api/identity/register", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      userName: "AmirLatif",
-      email: "amir.latif.programming@outlook.com",
-      password: "123456Aa@",
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+    body: new FormData(e.currentTarget),
+  }).then((response) => {
+    if (response.ok) response.json();
+    else response.json().then((data) => console.log(data.description));
+  });
 });
 
 //====================================================================
@@ -81,17 +76,19 @@ document.getElementById("searchProduct").addEventListener("click", function () {
 
 //====================================================================
 
-document.getElementById("getCategoryProducts").addEventListener("click", function () {
-  fetch("api/product/getCategoryProducts", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ category: "category" }),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
-});
+document
+  .getElementById("getCategoryProducts")
+  .addEventListener("click", function () {
+    fetch("api/product/getCategoryProducts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ category: "category" }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  });
 
 //====================================================================
 
@@ -140,7 +137,7 @@ document.getElementById("manageOrder").addEventListener("click", function () {
       voucher: "",
       orderId: "",
       action: "Add",
-      productId: ""
+      productId: "",
     }),
   })
     .then((response) => response.json())
@@ -156,7 +153,7 @@ document.getElementById("manageReview").addEventListener("click", function () {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      review: "some review", 
+      review: "some review",
       productId: "c5ceca02-b0a6-49df-9bd3-ea23e0a3af9b",
       rating: 2,
       action: "Add",
