@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+}
+.ratingIcon {
+  color: rgb(241, 168, 10);
+  width: 15px;
+  height: 15px;
+}
+.reviewCount {
+  display: block;
+  font-weight: 100;
+  font-size: 12px;
+  padding-top: 5px;
+}

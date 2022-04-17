@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+
+  align-items: center;
+  background-color: #232f3e;
+  max-height: 3rem;
+  height: 2rem;
+}
+.categoryItem {
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.sidebarBtn {
+  color: white;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  margin-left: 1rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.categoryWrapper {
+  width: max-content;
+}
+
+.categoryWrapper:hover {
+  border: 1px solid white;
+}
+
+.categoryItem {
+  color: white;
+  color: white;
+}
+.categoriesContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}

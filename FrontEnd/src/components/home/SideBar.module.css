@@ -1,0 +1,48 @@
+.container {
+  /*to make it cover all the screen */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+
+}
+.sidebar {
+  position: absolute;
+  align-items: center;
+  width: 30%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  
+  transition: ease-in 0.5s;
+  background-color: white;
+  animation: scale-up-hor-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  z-index: 2;
+}
+
+.exitIcon {
+  position: relative;
+  left: 100%;
+  background: transparent;
+
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+@keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+}
