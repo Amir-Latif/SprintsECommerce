@@ -36,7 +36,7 @@ namespace SprintsECommerce.Controllers
 
         #region Register
         [HttpPost("register")]
-        public async Task<IActionResult> Register(CredentialsRequest request)
+        public async Task<IActionResult> Register([FromForm] CredentialsRequest request)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -98,7 +98,7 @@ namespace SprintsECommerce.Controllers
 
         #region Login
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginRequest request)
+        public async Task<IActionResult> Login([FromForm] LoginRequest request)
         {
             UserStatuses userStatuses = new();
 
@@ -127,7 +127,7 @@ namespace SprintsECommerce.Controllers
 
         #region ChangePassword
         [HttpPost("changePassword")]
-        public async Task<IActionResult> ChangePassword(ChangePasswordRequest request)
+        public async Task<IActionResult> ChangePassword([FromForm] ChangePasswordRequest request)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
