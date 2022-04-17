@@ -1,12 +1,10 @@
 import './App.css';
-
 import Home from './screens/Home';
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import data from './utils/Data';
 import SignInPage from './screens/SignInPage';
 import SignUp from './screens/SignUp';
-
 import ProductDetails from './components/product/ProductDetails';
 import Products from './components/product/Products';
 

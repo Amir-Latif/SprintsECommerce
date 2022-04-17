@@ -41,11 +41,7 @@ function ProductDetails(state) {
               <h4>Product Desription</h4>
               <p>{productInfo.description}</p>
             </div>
-            <button>
-              <i>
-                <ShoppingCartOutlined />
-              </i>
-            </button>
+         
           </div>
         </div>
       </div>
