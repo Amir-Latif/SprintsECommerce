@@ -9,8 +9,9 @@ Online store
 3. Register to [SendGrid](https://sendgrid.com/) mail service
 3. Open ```appsettings.json``` and update your email, password and mail service key in ```SendGrid``` section
 also update your database username and password in ```ConnectionStrings/Development``` section
-4. Run ```cd ClientApp/``` then ```yarn install``` to install the front end dependencies
-5. Run ```cd ..```\
+4. Run ```dotnet tool install --global dotnet-ef``` then ```dotnet ef database update```
+5. Run ```cd ClientApp/``` then ```yarn install``` to install the front end dependencies
+6. Run ```cd ..```\
 then run the application by\
 ```dotnet run``` or ```dotnet watch run``` for development purposes
 
