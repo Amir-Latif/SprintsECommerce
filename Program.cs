@@ -32,8 +32,6 @@ services
 
 // Controllers
 services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-services.AddEndpointsApiExplorer();
 
 // SendGrid Service
 services.Configure<AuthMessageSenderOptions>(configuration.GetSection("SendGrid"));
@@ -63,5 +61,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapFallbackToFile("index.html");
 
 app.Run();

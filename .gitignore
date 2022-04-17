@@ -4,6 +4,7 @@ obj
 Todo.md
 ToCommit.md
 build
-node-modules
+node_modules
 *jpg
 *jpeg
+amconf.json
