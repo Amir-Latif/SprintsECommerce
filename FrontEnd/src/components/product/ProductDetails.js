@@ -1,11 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../utils/Data';
-import srcImage from '../../assets/p1.jpg';
+
 import classes from './ProductDetails.module.css';
 import Rating from '../minicomponents/Rating';
 
-import ShoppingCartOutlined from '@material-ui/icons/ShoppingCartOutlined';
+
+import AddToCart from '../minicomponents/AddToCart';
 
 function ProductDetails(state) {
   let { id } = useParams();
@@ -17,13 +18,15 @@ function ProductDetails(state) {
   return (
     <div className={classes['single-product-container']}>
      
-      <div class>
+      <div className={classes.layout} >
         <div className={classes['single-product']}>
+          <div className={classes['image-container']}>
           <img
             src={productInfo.images[0]}
             alt='image'
             className={classes['single-product-image']}
           />
+          </div>
           <div className={classes['single-product-info']}>
             <div className={classes['single-product-title']}>
               {productInfo.title}
@@ -41,12 +44,16 @@ function ProductDetails(state) {
               <h4>Product Desription</h4>
               <p>{productInfo.description}</p>
             </div>
-         
-          </div>
         </div>
+           
+              <AddToCart price = {productInfo.price} />
+             
+          </div>
       </div>
     </div>
   );
 }
+
+
 
 export default ProductDetails;

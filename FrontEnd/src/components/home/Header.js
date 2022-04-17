@@ -29,7 +29,7 @@ function Header(props) {
       {/* header navigation and cart count */}
       <div className={classes.headerNav}>
         {/* the user  */}
-        <Link to='signin'>
+        <Link to='/signin'>
           <div className={classes.headerOption}>
             <span className={classes.up}>Hello,{user?user.email:"Guest"} </span>
             <span className={classes.down}>{user?"Sign Out":"Sign In"}</span>

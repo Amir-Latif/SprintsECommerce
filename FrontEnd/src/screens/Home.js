@@ -15,11 +15,7 @@ import Slider from '../components/minicomponents/Slider';
 import Products from '../components/product/Products';
 const BannerImages = [Banner1, Banner2, Banner3, Banner4, Banner5, Banner6];
 function Home(props) {
-  // useEffect(()=>{
-  //   fetch('api/admin/getProducts')
-  //     .then((response) => response.json())
-  //     .then((data) => console.log(data));
-  // },[])
+
   const { state } = props;
 
   return (

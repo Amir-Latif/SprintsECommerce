@@ -5,8 +5,9 @@ import { Routes, Route } from 'react-router-dom';
 import data from './utils/Data';
 import SignInPage from './screens/SignInPage';
 import SignUp from './screens/SignUp';
-import ProductDetails from './components/product/ProductDetails';
+
 import Products from './components/product/Products';
+import ProductDetailsScreen from './screens/ProductDetailsScreen';
 
 function App() {
   const [state, setState] = useState([]);
@@ -20,7 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home state={state} />} />
         <Route path='/home' element={<Home state={state} />} />
-        <Route path='/product/:id' element={<ProductDetails state={state} />} />
+        <Route path='/product/:id' element={<ProductDetailsScreen state={state} />} />
         <Route path='/products' element={<Products state={state} />} />
         <Route path='/signin' element={<SignInPage />} />
         <Route path='/register' element={<SignUp />} />

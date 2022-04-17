@@ -23,6 +23,7 @@
 
 .single-product-info {
   padding-left: 20px;
+  
 }
 
 .single-product-title {
@@ -51,6 +52,7 @@
 
 .single-product-description {
   margin-top: 20px;
+  width: 50%;
 }
 
 .single-product-specification {

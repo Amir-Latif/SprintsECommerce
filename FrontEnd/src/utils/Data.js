@@ -16,7 +16,7 @@ const data = [
       
     ],
     brand: 'Apple',
-    price: 900,
+    price: "900.99",
     onSalePrice: 0,
     category: '6247952c2c7d38317ad7a99e',
     isFeatured: true,
