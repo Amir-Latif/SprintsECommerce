@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SprintsECommerce.Data;
 using SprintsECommerce.Models;
 using System.Text;
@@ -90,6 +91,7 @@ namespace SprintsECommerce.Controllers
         [HttpGet("getProducts")]
         public IActionResult GetProducts()
         {
+            _db.Reviews.Load();
             var products = _db.Products.ToArray();
             return Ok(_db.Products.Select(e => new
             {
@@ -100,7 +102,7 @@ namespace SprintsECommerce.Controllers
                 brand = e.Brand.Name,
                 e.Price,
                 e.Color,
-                e.Reviews,
+                reviews = e.Reviews == null? null : e.Reviews.Select(e => e.CustomerReview).ToArray(),
                 orderId = e.Order.Id,
                 e.DateAdded,
                 e.StockAvailability,
